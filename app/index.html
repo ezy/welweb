@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link type="text/plain" rel="author" href="/humans.txt" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="wwApp">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <header class="centered-navigation" role="banner">
+    <div class="centered-navigation-wrapper">
+      <a href="javascript:void(0)" class="mobile-logo">
+        <img src="images/WW.svg" alt="Logo image">
+      </a>
+      <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+      <nav role="navigation">
+        <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+          <li class="nav-link logo">
+            <a href="javascript:void(0)" class="logo">
+              <img src="images/WW.svg" alt="Wellington Web Logo">
+            </a>
+          </li>
+          <li class="nav-link"><a href="#footer-link">&darr;</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="lab" ng-controller="MasonryCtrl">
+    <article>
+      <div class="lab_item" ng-repeat="item in photos.items | limitTo:11">
+        <div class="hexagon hexagon2">
+          <div class="hexagon-in1">
+            <div class="hexagon-in2" style="background-image: url('{{ item.media.m }}');">
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer id="footer-link" class="footer" role="contentinfo">
+    <div class="footer-logo">
+      <img src="images/WW.svg" alt="Logo image">
+    </div>
+
+    <hr>
+
+    <p>
+      <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#119;&#101;&#108;&#108;&#105;&#110;&#103;&#116;&#111;&#110;&#119;&#101;&#98;&#46;&#99;&#111;&#46;&#110;&#122;'>&#67;&#111;&#110;&#116;&#97;&#99;&#116;</a>
+    </p>
+    <br>
+
+    <hr>
+
+    <p>The finest handcrafted website money can buy*</p>
+    <p class="small">*srsly</p>
+
+  </footer>
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+  ! function(A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+        (A[l].q = A[l].q || []).push(arguments)
+      }, A[l].l = +new Date, a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+  }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
